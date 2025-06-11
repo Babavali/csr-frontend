@@ -219,7 +219,7 @@ function Header(props) {
 							onClose={handleClose}
 							disablescrolllock={true}>
 							<MenuItem onClick={handleLogout} sx={{ width: '200px', display: 'flex', justifyContent: 'space-between' }}>
-								<Typography textAlign="center">Logout</Typography>
+								<Typography textAlign="center">Logoout</Typography>
 								<LogoutIcon />
 							</MenuItem>
 						</Menu>
