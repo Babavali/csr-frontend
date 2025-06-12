@@ -18,6 +18,7 @@ import { useNavigate } from 'react-router-dom'
 import { useMediaQuery } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../../slices/userDetailsSlice'
+import SettingsDropdown from './settingsDropdown'
 
 function Header(props) {
 	const location = window.location.pathname
@@ -189,6 +190,7 @@ function Header(props) {
 							</IconButton>
 						</Tooltip>
 					)}
+					<SettingsDropdown />
 					<Box sx={{ flexGrow: 0, marginLeft: '10px', cursor: 'pointer' }}>
 						<Box
 							aria-label="Account of Current User"
