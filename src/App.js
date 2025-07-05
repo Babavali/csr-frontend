@@ -7,10 +7,11 @@ import { AxiosInterceptor } from './shared/axios'
 import 'react-toastify/dist/ReactToastify.css'
 
 export default function MyApp() {
-	useEffect(() => {}, [window.location.pathName])
+	// prettier-ignore
+	useEffect(() => { }, [window.location.pathName])
 	return (
 		<>
-			<Router>
+			<Router basename="/data_harvent">
 				<AxiosInterceptor>
 					<AppRoutes />
 				</AxiosInterceptor>
