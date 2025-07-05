@@ -11,7 +11,7 @@ export default function MyApp() {
 	useEffect(() => { }, [window.location.pathName])
 	return (
 		<>
-			<Router basename="/data_harvent">
+			<Router basename="/data_harvest">
 				<AxiosInterceptor>
 					<AppRoutes />
 				</AxiosInterceptor>
