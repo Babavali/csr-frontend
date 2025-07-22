@@ -378,7 +378,7 @@ export default function LeadListingComponent({
 										boxShadow: '0px 0px 5px #D8D8D8',
 										zIndex: 3,
 									}}>
-									Patient Name
+									Lead Type
 								</TableCell>
 								<TableCell sx={{ fontWeight: 'bold', whiteSpace: 'nowrap' }}>Lead ID</TableCell>
 								<TableCell sx={{ fontWeight: 'bold', whiteSpace: 'nowrap' }}>Country</TableCell>

@@ -95,12 +95,12 @@ function Sidebar(props) {
 			value: user.isAdmin,
 		},
 		{
-			name: 'Doctors',
+			name: 'User',
 			url: '/business-partners',
 			value: user.isAdmin || user.isAuditor || user.type?.is_mt,
 		},
 		{
-			name: 'Doctor Activity',
+			name: 'User Activity',
 			url: '/doctor/activity',
 			value: user.isAdmin || user.isAuditor || isAllowed('doctor_activity_dashboard'),
 		},
