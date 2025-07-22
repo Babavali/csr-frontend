@@ -15,13 +15,13 @@ import { useMediaQuery } from '@mui/material'
 
 function Sidebar(props) {
 	const user = useSelector((state) => state.user)
-	const isAllowed = (perm) => {
-		const permissions = user.permissions
-		if (permissions[perm]) {
-			return true
-		}
-		return false
-	}
+	// const isAllowed = (perm) => {
+	// 	const permissions = user.permissions
+	// 	if (permissions[perm]) {
+	// 		return true
+	// 	}
+	// 	return false
+	// }
 	// const navigationOptions = [
 	// 	{
 	// 		name: 'Dashboard',
@@ -54,11 +54,11 @@ function Sidebar(props) {
 	// { name: "Approval", url: "/approval" },
 	// ]
 	const NavigationOptions = [
-		{
-			name: 'Dashboard',
-			url: '/dashboard',
-			value: isAllowed('admin_dashboard_access'),
-		},
+		// {
+		// 	name: 'Dashboard',
+		// 	url: '/dashboard',
+		// 	value: isAllowed('admin_dashboard_access'),
+		// },
 		{
 			name: 'All Leads',
 			url: '/leads',
@@ -79,41 +79,41 @@ function Sidebar(props) {
 			url: '/offline/leads',
 			value: user.isAdmin || user.isAuditor || user.type?.is_partner,
 		},
-		{
-			name: 'Lead Updates',
-			url: '/lead-updates',
-			value: isAllowed('lead_update_module_access'),
-		},
+		// {
+		// 	name: 'Lead Updates',
+		// 	url: '/lead-updates',
+		// 	value: isAllowed('lead_update_module_access'),
+		// },
 		{
 			name: 'Members',
 			url: '/members',
 			value: user.isAdmin,
 		},
-		{
-			name: 'Pending Approval',
-			url: '/pending-approval',
-			value: user.isAdmin,
-		},
-		{
-			name: 'User',
-			url: '/business-partners',
-			value: user.isAdmin || user.isAuditor || user.type?.is_mt,
-		},
-		{
-			name: 'User Activity',
-			url: '/doctor/activity',
-			value: user.isAdmin || user.isAuditor || isAllowed('doctor_activity_dashboard'),
-		},
-		{
-			name: 'Arrival Sheet',
-			url: '/arrival-sheet',
-			value: isAllowed('arrival_sheet_access'),
-		},
-		{
-			name: 'Upload Leads',
-			url: '/upload-leads',
-			value: isAllowed('upload_lead_csv'),
-		},
+		// {
+		// 	name: 'Pending Approval',
+		// 	url: '/pending-approval',
+		// 	value: user.isAdmin,
+		// },
+		// {
+		// 	name: 'User',
+		// 	url: '/business-partners',
+		// 	value: user.isAdmin || user.isAuditor || user.type?.is_mt,
+		// },
+		// {
+		// 	name: 'User Activity',
+		// 	url: '/doctor/activity',
+		// 	value: user.isAdmin || user.isAuditor || isAllowed('doctor_activity_dashboard'),
+		// },
+		// {
+		// 	name: 'Arrival Sheet',
+		// 	url: '/arrival-sheet',
+		// 	value: isAllowed('arrival_sheet_access'),
+		// },
+		// {
+		// 	name: 'Upload Leads',
+		// 	url: '/upload-leads',
+		// 	value: isAllowed('upload_lead_csv'),
+		// },
 		// {
 		//   name: "Analytics",
 		//   url: "/analytics",
